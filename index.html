@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Appel des différentes sources --> 
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.1.3/dist/maplibre-gl.css' />
+
+    <!-- Chargement du fichier css associé--> 
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <!-- Titre de la page--> 
+    <title>Webmap SISM Mond'Arverne Communauté</title>
+</head>
+
+<body>
+  <!--Création de la div pour la carte-->
+  <div id = 'map'>
+
+    <!--Création de la div pour les titres-->
+    <div id= 'titre'> 
+      
+      <div id='titre1'>Semaine d'information sur la santé mentale 2026</div>
+      <div id='titre2'>Programme de Mond'Arverne Communauté</div>
+
+      <!--Création de la div pour les logos-->
+      <div class="logos" >
+
+        <!--Logo SISM-->
+        <div id="logo_SISM"> 
+          <a href="https://www.chsmclermontferrand.ahsm.fr/partenaires-associations-2/les-semaines-dinformations-sur-la-sante-mentale-sism/" target="_blank">
+            <img id="sism_logo" src="https://raw.githubusercontent.com/mondarverne/SISM/main/Logos/SISM_WEB_logo_full_color.png" alt="Logo de la SISM">
+          </a>
+        </div>  
+
+        <!--Logo MAC-->      
+        <div id="logo_mac"> 
+          <a href="https://www.mond-arverne.fr/" target="_blank">
+            <img id="cls_logo" src="https://raw.githubusercontent.com/mondarverne/SISM/main/Logos/CLS.png" alt="Logo du Contrat Local de Santé">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--Création d'une div pour les boutons de recherche-->
+    <div id="search-container"> 
+
+      <!--Bouton pour sélectionner une activité-->
+      <button id="btn-activites">Sélectionner une activité</button>
+      
+      <!--Liste déroulantes des activités-->
+      <div id="liste-activites" class="liste-activites"></div>
+    </div>
+    
+    <!--Création de la div pour la légende-->
+    <div class="map-overlay" id="legend">
+        <div id="legend-items"></div>
+        <div id="contact">
+            Pour plus d'informations et inscriptions, contactez le 06 49 70 10 57 ou p.salque@mond-arverne.fr
+        </div>
+    </div>
+    
+    <!--Appel du fichier javascript-->
+    <script src='https://unpkg.com/maplibre-gl@4.1.3/dist/maplibre-gl.js'></script>
+    <script src="script.js"></script>
+</div> 
+</body>
+</html>
